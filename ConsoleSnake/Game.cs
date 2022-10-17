@@ -32,6 +32,7 @@ namespace ConsoleSnake
             if (player.isAlive)
             {
                 grid.PrintGrid();
+                Print(grid.height, "Score:", player.length - 3, "\t\t\t\t\t\t\t\t\tHigh Score:", highScore);;
                 HandleInput();
                 var mstatus = player.Move(player.direction);
                 if (mstatus == MoveStatus.Apple) { player.length++; SpawnApple(); }
